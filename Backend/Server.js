@@ -33,7 +33,7 @@ const allowedOrigins = [
   "http://localhost:5174",
   "http://127.0.0.1:5173",
   "http://127.0.0.1:5174",
-  "https://recyclerepo-q374.vercel.app/"
+ process.env.FRONTEND_URL
 ];
 
 app.use(
@@ -74,6 +74,11 @@ app.use("/api/centers", centersRoutes);
 app.use("/api/progress", progressRoutes);
 app.get("/", (req, res) => {
   res.send("Server is running...");
+});
+
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 });
 
 const PORT = process.env.PORT || 5000;
