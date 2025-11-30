@@ -8,6 +8,9 @@
     "start": "node Server.js",
     "dev": "nodemon Server.js"
   },
+  "engines": {
+    "node": "v22.19.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
